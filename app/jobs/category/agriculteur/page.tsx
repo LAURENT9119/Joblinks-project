@@ -12,7 +12,7 @@ export default function AgriculteurPage() {
     {
       id: 101,
       title: "Ouvrier agricole pour récolte de cacao",
-      location: "Daloa, Côte d'Ivoire",
+      location: "Bépanda, Douala",
       type: "Saisonnier",
       date: "Aujourd'hui",
       employer: "Plantation Kouassi",
@@ -21,7 +21,7 @@ export default function AgriculteurPage() {
     {
       id: 102,
       title: "Technicien agricole pour plantation d'ananas",
-      location: "Bonoua, Côte d'Ivoire",
+      location: "Bonamoutongo, Douala",
       type: "Temps plein",
       date: "Hier",
       employer: "Ananas Export SA",
@@ -31,7 +31,7 @@ export default function AgriculteurPage() {
     {
       id: 103,
       title: "Aide pour élevage de poulets",
-      location: "Bingerville, Côte d'Ivoire",
+      location: "PK19, Douala",
       type: "Temps partiel",
       date: "Il y a 3 jours",
       employer: "Ferme Avicole Moderne",
@@ -40,7 +40,7 @@ export default function AgriculteurPage() {
     {
       id: 104,
       title: "Conducteur de tracteur",
-      location: "Yamoussoukro, Côte d'Ivoire",
+      location: "PK32, Douala",
       type: "Mission",
       date: "Il y a 4 jours",
       employer: "Coopérative Agricole",
@@ -49,7 +49,7 @@ export default function AgriculteurPage() {
     {
       id: 105,
       title: "Gardien de plantation",
-      location: "Aboisso, Côte d'Ivoire",
+      location: "village, Douala",
       type: "Temps plein",
       date: "Il y a 5 jours",
       employer: "Plantation d'hévéa",

@@ -97,7 +97,7 @@ export default function DashboardPage() {
                   <div>
                     <p className="text-sm font-medium mb-1">Contact</p>
                     <p className="text-sm flex items-center gap-1">
-                      <Phone className="h-3 w-3" /> +225 07 XX XX XX XX
+                      <Phone className="h-3 w-3" /> +237 6 XX XX XX XX
                     </p>
                   </div>
 

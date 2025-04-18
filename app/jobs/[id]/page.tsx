@@ -30,7 +30,7 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
     employer: "Jean Kouassi",
     phone: "+237 6 XX XX XX XX",
     description:
-      "Recherche maçon expérimenté pour construction d'une maison de 3 chambres. Le chantier est situé à Yopougon, quartier Niangon. Le travail comprend la fondation, l'élévation des murs et le coulage de la dalle. Les matériaux sont déjà sur place. Possibilité de logement sur le chantier.",
+      "Recherche maçon expérimenté pour construction d'une maison de 3 chambres. Le chantier est situé à Yassa. Le travail comprend la fondation, l'élévation des murs et le coulage de la dalle. Les matériaux sont déjà sur place. Possibilité de logement sur le chantier.",
     requirements: [
       "Minimum 3 ans d'expérience en maçonnerie",
       "Capable de lire des plans de construction",

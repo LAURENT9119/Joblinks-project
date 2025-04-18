@@ -22,13 +22,13 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
   const job = {
     id: params.id,
     title: "Maçon pour construction maison",
-    location: "Yopougon, Abidjan",
+    location: "Yassa, Douala",
     type: "Mission",
     date: "Publié aujourd'hui",
     duration: "2 mois",
     salary: "150,000 FCFA / mois",
     employer: "Jean Kouassi",
-    phone: "+225 07 XX XX XX XX",
+    phone: "+237 6 XX XX XX XX",
     description:
       "Recherche maçon expérimenté pour construction d'une maison de 3 chambres. Le chantier est situé à Yopougon, quartier Niangon. Le travail comprend la fondation, l'élévation des murs et le coulage de la dalle. Les matériaux sont déjà sur place. Possibilité de logement sur le chantier.",
     requirements: [

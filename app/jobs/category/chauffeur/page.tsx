@@ -15,7 +15,7 @@ export default function ChauffeurPage() {
       location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Famille expatriée",
+      employer: "Famille Nkomo",
       description: "Transport quotidien pour une famille. Horaires : 7h-19h, du lundi au samedi. Permis B exigé.",
     },
     {
@@ -24,7 +24,7 @@ export default function ChauffeurPage() {
       location: "Douala",
       type: "Temps plein",
       date: "Hier",
-      employer: "Compagnie de taxi",
+      employer: "Compagnie de Taxi Douala",
       description: "Location de taxi avec possibilité d'achat. Permis B et connaissance de la ville exigés.",
     },
     {
@@ -33,7 +33,7 @@ export default function ChauffeurPage() {
       location: "Bonapriso, Douala",
       type: "Temps plein",
       date: "Il y a 2 jours",
-      employer: "Entreprise de livraison",
+      employer: "Express Cameroun",
       description:
         "Livraison de colis dans Douala et environs. Permis B et moto fournie. Bonne connaissance de la ville.",
     },
@@ -43,7 +43,7 @@ export default function ChauffeurPage() {
       location: "Yaoundé",
       type: "Temps partiel",
       date: "Il y a 3 jours",
-      employer: "Plateforme VTC",
+      employer: "Plateforme VTC Cameroun",
       description: "Chauffeur indépendant pour application de VTC. Véhicule personnel requis. Horaires flexibles.",
     },
     {
@@ -52,7 +52,7 @@ export default function ChauffeurPage() {
       location: "Douala - Bafoussam",
       type: "Temps plein",
       date: "Il y a 5 jours",
-      employer: "Société de transport",
+      employer: "Société de Transport Bafoussam",
       description: "Transport de marchandises entre Douala et Bafoussam. Permis C exigé. Expérience minimum 3 ans.",
     },
   ]

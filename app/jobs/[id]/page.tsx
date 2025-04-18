@@ -1,187 +1,339 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
+import { useParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-  BriefcaseBusiness,
-  ArrowLeft,
-  MapPin,
-  Calendar,
-  Clock,
-  Phone,
-  MessageSquare,
-  Share2,
-  Bookmark,
-} from "lucide-react"
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Textarea } from "@/components/ui/textarea"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { MapPin, Calendar, Building2, Phone, Mail, ArrowLeft, Share2, BookmarkPlus, Send, Loader2 } from "lucide-react"
+import { DashboardHeader } from "@/components/dashboard-header"
+import { DashboardFooter } from "@/components/dashboard-footer"
+import { jobs, formatDate } from "@/lib/data"
+import { toast } from "@/hooks/use-toast"
 
-export default function JobDetailPage({ params }: { params: { id: string } }) {
-  // Données simulées pour l'offre d'emploi
-  const job = {
-    id: params.id,
-    title: "Maçon pour construction maison",
-    location: "Yassa, Douala",
-    type: "Mission",
-    date: "Publié aujourd'hui",
-    duration: "2 mois",
-    salary: "150,000 FCFA / mois",
-    employer: "Jean Kouassi",
-    phone: "+237 6 XX XX XX XX",
-    description:
-      "Recherche maçon expérimenté pour construction d'une maison de 3 chambres. Le chantier est situé à Yopougon, quartier Niangon. Le travail comprend la fondation, l'élévation des murs et le coulage de la dalle. Les matériaux sont déjà sur place. Possibilité de logement sur le chantier.",
-    requirements: [
-      "Minimum 3 ans d'expérience en maçonnerie",
-      "Capable de lire des plans de construction",
-      "Disponible immédiatement",
-      "Références appréciées",
-    ],
+export default function JobDetailsPage() {
+  const params = useParams()
+  const jobId = params.id as string
+
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState("")
+
+  // Trouver l'offre correspondante
+  const job = jobs.find((j) => j.id === jobId)
+
+  if (!job) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <DashboardHeader />
+        <main className="flex-1 container mx-auto px-4 py-8">
+          <div className="text-center py-12">
+            <h1 className="text-2xl font-bold mb-4">Offre non trouvée</h1>
+            <p className="text-gray-500 mb-6">L'offre que vous recherchez n'existe pas ou a été supprimée.</p>
+            <Button asChild>
+              <Link href="/dashboard">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Retour au tableau de bord
+              </Link>
+            </Button>
+          </div>
+        </main>
+        <DashboardFooter />
+      </div>
+    )
+  }
+
+  const handleSendMessage = () => {
+    setIsLoading(true)
+
+    // Simuler l'envoi du message
+    setTimeout(() => {
+      setIsLoading(false)
+      setMessage("")
+
+      toast({
+        title: "Message envoyé",
+        description: "Votre message a été envoyé avec succès à l'employeur.",
+      })
+    }, 1500)
+  }
+
+  const handleSaveJob = () => {
+    toast({
+      title: "Offre enregistrée",
+      description: "Cette offre a été ajoutée à vos favoris.",
+    })
+  }
+
+  const handleShareJob = () => {
+    // Copier le lien dans le presse-papier
+    navigator.clipboard.writeText(window.location.href)
+
+    toast({
+      title: "Lien copié",
+      description: "Le lien de l'offre a été copié dans le presse-papier.",
+    })
   }
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <BriefcaseBusiness className="h-6 w-6 text-blue-600" />
-            <h1 className="text-xl font-bold text-blue-600">JobLink</h1>
-          </div>
-          <Link href="/dashboard">
-            <Button variant="ghost" size="sm">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Retour
-            </Button>
-          </Link>
-        </div>
-      </header>
+      <DashboardHeader />
 
       <main className="flex-1 container mx-auto px-4 py-6">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Main Content */}
-          <div className="flex-1">
+        <div className="mb-6">
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/dashboard">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Retour aux offres
+            </Link>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Détails de l'offre */}
+          <div className="lg:col-span-2 space-y-6">
             <Card>
-              <CardHeader className="pb-2">
-                <div className="flex justify-between items-start">
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
                   <div>
-                    <Badge className="mb-2">{job.type}</Badge>
-                    <CardTitle className="text-2xl">{job.title}</CardTitle>
-                    <div className="flex items-center gap-4 mt-2 text-gray-500 text-sm">
+                    <h1 className="text-2xl font-bold mb-2">{job.title}</h1>
+                    <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
                       <div className="flex items-center gap-1">
                         <MapPin className="h-4 w-4" />
-                        {job.location}
+                        <span>{job.location}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="h-4 w-4" />
-                        {job.date}
+                        <span>Publié {formatDate(job.date)}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Building2 className="h-4 w-4" />
+                        <span>{job.employer}</span>
                       </div>
                     </div>
                   </div>
-                  <div className="flex gap-2">
-                    <Button variant="ghost" size="icon">
-                      <Bookmark className="h-4 w-4" />
-                    </Button>
-                    <Button variant="ghost" size="icon">
-                      <Share2 className="h-4 w-4" />
-                    </Button>
-                  </div>
+                  <Badge className="ml-2">{job.type}</Badge>
                 </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <Badge variant="outline">{job.sector}</Badge>
+                  <Badge variant="outline">{job.category}</Badge>
+                </div>
+
+                <Tabs defaultValue="description" className="mt-6">
+                  <TabsList>
+                    <TabsTrigger value="description">Description</TabsTrigger>
+                    <TabsTrigger value="requirements">Exigences</TabsTrigger>
+                    <TabsTrigger value="details">Détails</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="description" className="mt-4">
+                    <p className="text-gray-700 whitespace-pre-line">{job.description}</p>
+                  </TabsContent>
+                  <TabsContent value="requirements" className="mt-4">
+                    <p className="text-gray-700 whitespace-pre-line">
+                      {job.requirements || "Aucune exigence spécifique mentionnée."}
+                    </p>
+                  </TabsContent>
+                  <TabsContent value="details" className="mt-4">
+                    <div className="space-y-4">
+                      {job.salary && (
+                        <div>
+                          <h3 className="font-medium">Rémunération</h3>
+                          <p className="text-gray-700">{job.salary}</p>
+                        </div>
+                      )}
+                      {job.duration && (
+                        <div>
+                          <h3 className="font-medium">Durée</h3>
+                          <p className="text-gray-700">{job.duration}</p>
+                        </div>
+                      )}
+                      <div>
+                        <h3 className="font-medium">Statistiques</h3>
+                        <p className="text-gray-700">
+                          {job.views} vues · {job.applications} candidatures
+                        </p>
+                      </div>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+
+                <div className="flex flex-wrap gap-2 mt-6">
+                  <Button className="bg-blue-600 hover:bg-blue-700" asChild>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="bg-blue-600 hover:bg-blue-700">
+                          <Send className="mr-2 h-4 w-4" />
+                          Contacter l'employeur
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Contacter l'employeur</DialogTitle>
+                          <DialogDescription>
+                            Envoyez un message à {job.employer} concernant l'offre "{job.title}"
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4 py-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="message">Votre message</Label>
+                            <Textarea
+                              id="message"
+                              placeholder="Présentez-vous brièvement et expliquez pourquoi vous êtes intéressé(e) par cette offre..."
+                              value={message}
+                              onChange={(e) => setMessage(e.target.value)}
+                              rows={5}
+                            />
+                          </div>
+                        </div>
+                        <DialogFooter>
+                          <Button variant="outline" onClick={() => setMessage("")}>
+                            Annuler
+                          </Button>
+                          <Button
+                            className="bg-blue-600 hover:bg-blue-700"
+                            onClick={handleSendMessage}
+                            disabled={isLoading || !message.trim()}
+                          >
+                            {isLoading ? (
+                              <>
+                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                Envoi en cours...
+                              </>
+                            ) : (
+                              "Envoyer le message"
+                            )}
+                          </Button>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
+                  </Button>
+                  <Button variant="outline" onClick={handleSaveJob}>
+                    <BookmarkPlus className="mr-2 h-4 w-4" />
+                    Sauvegarder
+                  </Button>
+                  <Button variant="outline" onClick={handleShareJob}>
+                    <Share2 className="mr-2 h-4 w-4" />
+                    Partager
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Offres similaires</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="font-medium mb-2">Description</h3>
-                    <p className="text-gray-700">{job.description}</p>
-                  </div>
-
-                  <div>
-                    <h3 className="font-medium mb-2">Exigences</h3>
-                    <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                      {job.requirements.map((req, index) => (
-                        <li key={index}>{req}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="border rounded-lg p-3">
-                      <p className="text-sm text-gray-500 mb-1">Durée</p>
-                      <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4 text-blue-600" />
-                        <p className="font-medium">{job.duration}</p>
+                <div className="space-y-4">
+                  {jobs
+                    .filter((j) => j.id !== job.id && j.sector === job.sector)
+                    .slice(0, 3)
+                    .map((similarJob) => (
+                      <div key={similarJob.id} className="p-4 border rounded-lg hover:bg-gray-50">
+                        <Link href={`/jobs/${similarJob.id}`} className="block">
+                          <h3 className="font-medium mb-1">{similarJob.title}</h3>
+                          <div className="flex justify-between items-center text-sm">
+                            <span className="text-gray-500">{similarJob.location}</span>
+                            <span className="text-gray-500">{formatDate(similarJob.date)}</span>
+                          </div>
+                        </Link>
                       </div>
-                    </div>
-                    <div className="border rounded-lg p-3">
-                      <p className="text-sm text-gray-500 mb-1">Rémunération</p>
-                      <p className="font-medium">{job.salary}</p>
-                    </div>
-                  </div>
+                    ))}
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Sidebar / Employer */}
-          <div className="w-full md:w-1/3 lg:w-1/4">
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">À propos de l'employeur</CardTitle>
+          {/* Informations de contact */}
+          <div className="space-y-6">
+            <Card id="contact">
+              <CardHeader>
+                <CardTitle>Informations de contact</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center gap-3 mb-4">
-                  <Avatar className="h-12 w-12">
-                    <AvatarFallback>JK</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h3 className="font-medium">{job.employer}</h3>
-                    <p className="text-gray-500 text-sm">Particulier</p>
-                  </div>
-                </div>
-
                 <div className="space-y-4">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
-                    <a href={`tel:${job.phone}`}>
-                      <Phone className="h-4 w-4 mr-2" />
+                  <div className="flex items-center gap-3">
+                    <div className="bg-blue-100 p-2 rounded-full">
+                      <Building2 className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="font-medium">{job.employer}</p>
+                      <p className="text-sm text-gray-500">{job.location}</p>
+                    </div>
+                  </div>
+
+                  <Separator />
+
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 text-gray-500" />
+                      <span>+237 6XX XX XX XX</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Mail className="h-5 w-5 text-gray-500" />
+                      <span>contact@example.com</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                      <Phone className="mr-2 h-4 w-4" />
                       Appeler
-                    </a>
-                  </Button>
-
-                  <Button variant="outline" className="w-full" asChild>
-                    <a
-                      href={`https://wa.me/${job.phone.replace(/\s+/g, "")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MessageSquare className="h-4 w-4 mr-2" />
-                      WhatsApp
-                    </a>
-                  </Button>
-
-                  <div className="text-center text-sm text-gray-500 pt-2">
-                    <p>Mentionnez JobLink quand vous contactez l'employeur</p>
+                    </Button>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Postuler</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-gray-500">Envoyez votre candidature directement à l'employeur.</p>
+
+                <div className="space-y-3">
+                  <div>
+                    <Label htmlFor="name">Nom complet</Label>
+                    <Input id="name" placeholder="Votre nom" />
+                  </div>
+                  <div>
+                    <Label htmlFor="phone">Téléphone</Label>
+                    <Input id="phone" placeholder="+237 6XX XX XX XX" />
+                  </div>
+                  <div>
+                    <Label htmlFor="message">Message (optionnel)</Label>
+                    <Textarea id="message" placeholder="Présentez-vous brièvement..." rows={3} />
+                  </div>
+                  <div>
+                    <Label htmlFor="cv">CV (optionnel)</Label>
+                    <Input id="cv" type="file" />
+                  </div>
+                </div>
+
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">Envoyer ma candidature</Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </main>
 
-      <footer className="bg-white border-t mt-auto">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <p className="text-sm text-gray-600">© 2025 JobLink</p>
-            <div className="flex gap-4">
-              <Link href="/about" className="text-sm text-gray-600 hover:text-blue-600">
-                À propos
-              </Link>
-              <Link href="/help" className="text-sm text-gray-600 hover:text-blue-600">
-                Aide
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <DashboardFooter />
     </div>
   )
 }

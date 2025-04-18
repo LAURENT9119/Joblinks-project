@@ -7,21 +7,21 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function ServicesPage() {
-  // Données simulées pour les offres d'emploi dans le secteur des services
+  // Données simulées pour les offres d'emploi dans le secteur des services au Cameroun
   const jobs = [
     {
       id: 301,
       title: "Femme de ménage pour villa",
-      location: "Riviera, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Famille Diallo",
+      employer: "Famille Ngassa",
       description: "Ménage quotidien, lessive et repassage pour une famille de 4 personnes. Logée ou non.",
     },
     {
       id: 302,
       title: "Chauffeur personnel",
-      location: "Cocody, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps plein",
       date: "Aujourd'hui",
       employer: "Directeur d'entreprise",
@@ -30,16 +30,16 @@ export default function ServicesPage() {
     {
       id: 303,
       title: "Gardien de résidence",
-      location: "Deux Plateaux, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps plein",
       date: "Hier",
-      employer: "Résidence Les Palmes",
+      employer: "Résidence Les Palmiers",
       description: "Surveillance d'une résidence de standing. Travail par rotation (jour/nuit). Logement sur place.",
     },
     {
       id: 304,
       title: "Babysitter pour 2 enfants",
-      location: "Marcory, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps partiel",
       date: "Hier",
       employer: "Famille expatriée",
@@ -48,7 +48,7 @@ export default function ServicesPage() {
     {
       id: 305,
       title: "Serveur/Serveuse pour restaurant",
-      location: "Zone 4, Abidjan",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "Restaurant Le Gourmet",
@@ -57,7 +57,7 @@ export default function ServicesPage() {
     {
       id: 306,
       title: "Coiffeur/Coiffeuse",
-      location: "Adjamé, Abidjan",
+      location: "Mvan, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Salon de beauté Elite",
@@ -66,7 +66,7 @@ export default function ServicesPage() {
     {
       id: 307,
       title: "Agent de sécurité",
-      location: "Plateau, Abidjan",
+      location: "Bonanjo, Douala",
       type: "Temps plein",
       date: "Il y a 4 jours",
       employer: "Société de gardiennage",
@@ -75,7 +75,7 @@ export default function ServicesPage() {
     {
       id: 308,
       title: "Cuisinier pour famille",
-      location: "Cocody, Abidjan",
+      location: "Bafoussam, Ouest",
       type: "Temps partiel",
       date: "Il y a 5 jours",
       employer: "Famille Kouamé",
@@ -120,10 +120,10 @@ export default function ServicesPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="riviera">Riviera</SelectItem>
-                  <SelectItem value="marcory">Marcory</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
+                  <SelectItem value="bafoussam">Bafoussam</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">
@@ -140,39 +140,6 @@ export default function ServicesPage() {
                 <Filter className="h-4 w-4" />
               </Button>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Métiers populaires dans les services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link href="/jobs/category/femme-de-menage">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Femme de ménage
-              </Badge>
-            </Link>
-            <Link href="/jobs/category/chauffeur">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Chauffeur
-              </Badge>
-            </Link>
-            <Link href="/jobs/category/babysitter">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Babysitter
-              </Badge>
-            </Link>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Serveur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Cuisinier
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Gardien
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Coiffeur
-            </Badge>
           </div>
         </div>
 

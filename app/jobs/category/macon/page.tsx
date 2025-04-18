@@ -7,12 +7,12 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function MaconPage() {
-  // Données simulées pour les offres d'emploi de maçon
+  // Données simulées pour les offres d'emploi de maçon au Cameroun
   const jobs = [
     {
       id: 201,
       title: "Maçon pour construction villa",
-      location: "Cocody, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Mission",
       date: "Aujourd'hui",
       employer: "Cabinet d'architecture Moderne",
@@ -21,16 +21,16 @@ export default function MaconPage() {
     {
       id: 202,
       title: "Maçon pour rénovation appartement",
-      location: "Plateau, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Mission",
       date: "Hier",
-      employer: "Immobilier Plus",
+      employer: "Immobilier Plus Cameroun",
       description: "Rénovation complète d'un appartement de 3 pièces. Travaux de carrelage, enduit et peinture.",
     },
     {
       id: 203,
       title: "Chef d'équipe maçonnerie",
-      location: "Yopougon, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "Constructions Modernes SA",
@@ -39,17 +39,16 @@ export default function MaconPage() {
     {
       id: 204,
       title: "Apprenti maçon",
-      location: "Abobo, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Entreprise Konaté",
-      description:
-        "Formation sur le terrain pour jeune motivé. Pas d'expérience requise, mais sérieux et ponctualité exigés.",
+      description: "Formation sur le terrain pour jeune motivé. Pas d'expérience requise, mais sérieux et ponctualité exigés.",
     },
     {
       id: 205,
       title: "Maçon pour construction école",
-      location: "Bouaké, Côte d'Ivoire",
+      location: "Kribi, Sud",
       type: "Mission",
       date: "Il y a 5 jours",
       employer: "ONG Éducation Pour Tous",
@@ -94,10 +93,10 @@ export default function MaconPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="yopougon">Yopougon</SelectItem>
-                  <SelectItem value="bouake">Bouaké</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

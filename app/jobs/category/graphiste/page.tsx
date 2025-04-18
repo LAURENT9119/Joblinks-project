@@ -7,15 +7,15 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function GraphistePage() {
-  // Données simulées pour les offres d'emploi de graphiste
+  // Données simulées pour les offres d'emploi de graphiste au Cameroun
   const jobs = [
     {
       id: 501,
       title: "Graphiste pour agence de communication",
-      location: "Plateau, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Agence Créative",
+      employer: "Agence Créative Cameroun",
       description: "Création de supports visuels pour clients variés. Maîtrise de la suite Adobe exigée.",
     },
     {
@@ -24,13 +24,13 @@ export default function GraphistePage() {
       location: "Travail à distance",
       type: "Mission",
       date: "Hier",
-      employer: "Startup Tech",
+      employer: "Startup Tech Cameroun",
       description: "Refonte de l'identité visuelle d'une plateforme e-commerce. Mission de 2 mois.",
     },
     {
       id: 503,
       title: "Graphiste/Infographiste",
-      location: "Cocody, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps partiel",
       date: "Il y a 2 jours",
       employer: "Journal Le Quotidien",
@@ -39,19 +39,19 @@ export default function GraphistePage() {
     {
       id: 504,
       title: "Graphiste pour réseaux sociaux",
-      location: "Zone 4, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps plein",
       date: "Il y a 3 jours",
-      employer: "Agence digitale Connecté",
+      employer: "Agence Digitale Connectée",
       description: "Création de visuels pour réseaux sociaux de grandes marques. Expérience requise.",
     },
     {
       id: 505,
       title: "Graphiste junior",
-      location: "Marcory, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 5 jours",
-      employer: "Imprimerie Moderne",
+      employer: "Imprimerie Moderne Cameroun",
       description: "Création de supports imprimés (flyers, affiches, cartes de visite). Formation possible.",
     },
   ]
@@ -93,9 +93,10 @@ export default function GraphistePage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="bonapriso">Bonapriso</SelectItem>
                   <SelectItem value="remote">Travail à distance</SelectItem>
                 </SelectContent>
               </Select>

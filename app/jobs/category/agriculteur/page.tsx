@@ -7,53 +7,53 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function AgriculteurPage() {
-  // Données simulées pour les offres d'emploi dans l'agriculture
+  // Données simulées pour les offres d'emploi dans l'agriculture au Cameroun
   const jobs = [
     {
       id: 101,
-      title: "Ouvrier agricole pour récolte de cacao",
-      location: "Bépanda, Douala",
+      title: "Ouvrier agricole pour récolte de manioc",
+      location: "Nkongsamba, Littoral",
       type: "Saisonnier",
       date: "Aujourd'hui",
-      employer: "Plantation Kouassi",
-      description: "Recherche 5 ouvriers pour la récolte de cacao. Expérience souhaitée. Logement possible sur place.",
+      employer: "Plantation Nteme",
+      description: "Recherche 5 ouvriers pour la récolte de manioc. Expérience souhaitée. Logement possible sur place.",
     },
     {
       id: 102,
-      title: "Technicien agricole pour plantation d'ananas",
-      location: "Bonamoutongo, Douala",
+      title: "Technicien agricole pour plantation de bananes",
+      location: "Bafoussam, Ouest",
       type: "Temps plein",
       date: "Hier",
-      employer: "Ananas Export SA",
+      employer: "Bananes Cameroun SARL",
       description:
         "Suivi des cultures, gestion des traitements et supervision des ouvriers. Formation en agronomie requise.",
     },
     {
       id: 103,
       title: "Aide pour élevage de poulets",
-      location: "PK19, Douala",
+      location: "Etoudi, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 3 jours",
-      employer: "Ferme Avicole Moderne",
+      employer: "Ferme Avicole du Centre",
       description: "Alimentation des volailles, nettoyage des poulaillers et collecte des œufs. 3 jours par semaine.",
     },
     {
       id: 104,
       title: "Conducteur de tracteur",
-      location: "PK32, Douala",
+      location: "Nanga Eboko, Centre",
       type: "Mission",
       date: "Il y a 4 jours",
-      employer: "Coopérative Agricole",
+      employer: "Coopérative Agricole du Mbam",
       description: "Préparation des sols pour la saison des semis. Permis tracteur exigé. Mission de 3 semaines.",
     },
     {
       id: 105,
       title: "Gardien de plantation",
-      location: "village, Douala",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 5 jours",
-      employer: "Plantation d'hévéa",
-      description: "Surveillance de plantation d'hévéa. Logement sur place fourni. Expérience en sécurité appréciée.",
+      employer: "Plantation de palmiers à huile",
+      description: "Surveillance de plantation de palmiers à huile. Logement sur place fourni. Expérience en sécurité appréciée.",
     },
   ]
 
@@ -92,10 +92,10 @@ export default function AgriculteurPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="daloa">Daloa</SelectItem>
-                  <SelectItem value="yamoussoukro">Yamoussoukro</SelectItem>
-                  <SelectItem value="bonoua">Bonoua</SelectItem>
+                  <SelectItem value="nkongsamba">Nkongsamba</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="bafoussam">Bafoussam</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

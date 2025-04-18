@@ -7,21 +7,21 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function EducationPage() {
-  // Données simulées pour les offres d'emploi dans le secteur de l'éducation
+  // Données simulées pour les offres d'emploi dans le secteur de l'éducation au Cameroun
   const jobs = [
     {
       id: 401,
       title: "Professeur de mathématiques",
-      location: "Cocody, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Lycée Excellence",
+      employer: "Lycée Excellence Cameroun",
       description: "Enseignement des mathématiques pour les classes de seconde, première et terminale. Diplôme requis.",
     },
     {
       id: 402,
       title: "Professeur d'anglais",
-      location: "Plateau, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps partiel",
       date: "Hier",
       employer: "Centre linguistique",
@@ -30,16 +30,16 @@ export default function EducationPage() {
     {
       id: 403,
       title: "Répétiteur à domicile",
-      location: "Marcory, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps partiel",
       date: "Hier",
-      employer: "Famille Koné",
+      employer: "Famille Nkomo",
       description: "Soutien scolaire à domicile pour élève de CM2, en français et mathématiques. 3 fois par semaine.",
     },
     {
       id: 404,
       title: "Directeur d'école primaire",
-      location: "Yopougon, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "École Les Petits Génies",
@@ -48,7 +48,7 @@ export default function EducationPage() {
     {
       id: 405,
       title: "Éducateur petite enfance",
-      location: "Riviera, Abidjan",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Crèche Les Bambins",
@@ -57,7 +57,7 @@ export default function EducationPage() {
     {
       id: 406,
       title: "Professeur de sciences",
-      location: "Bouaké, Côte d'Ivoire",
+      location: "Bafoussam, Ouest",
       type: "Temps plein",
       date: "Il y a 4 jours",
       employer: "Collège Saint-Michel",
@@ -66,7 +66,7 @@ export default function EducationPage() {
     {
       id: 407,
       title: "Formateur(trice) informatique",
-      location: "Treichville, Abidjan",
+      location: "Ebolowa, Sud",
       type: "Temps partiel",
       date: "Il y a 5 jours",
       employer: "Centre de formation",
@@ -75,7 +75,7 @@ export default function EducationPage() {
     {
       id: 408,
       title: "Surveillant d'internat",
-      location: "Cocody, Abidjan",
+      location: "Nkongsamba, Littoral",
       type: "Temps plein",
       date: "Il y a 1 semaine",
       employer: "Lycée International",
@@ -120,10 +120,10 @@ export default function EducationPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="yopougon">Yopougon</SelectItem>
-                  <SelectItem value="bouake">Bouaké</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
+                  <SelectItem value="bafoussam">Bafoussam</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">
@@ -140,32 +140,6 @@ export default function EducationPage() {
                 <Filter className="h-4 w-4" />
               </Button>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Métiers populaires dans l'éducation</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link href="/jobs/category/professeur">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Professeur
-              </Badge>
-            </Link>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Répétiteur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Éducateur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Formateur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Directeur d'établissement
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Surveillant
-            </Badge>
           </div>
         </div>
 

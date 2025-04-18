@@ -7,40 +7,40 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function AgriculturePage() {
-  // Données simulées pour les offres d'emploi dans le secteur agricole
+  // Données simulées pour les offres d'emploi dans le secteur agricole au Cameroun
   const jobs = [
     {
       id: 101,
       title: "Ouvrier agricole pour récolte de cacao",
-      location: "Daloa, Côte d'Ivoire",
+      location: "Nkongsamba, Littoral",
       type: "Saisonnier",
       date: "Aujourd'hui",
-      employer: "Plantation Kouassi",
+      employer: "Plantation Nteme",
       description: "Recherche 5 ouvriers pour la récolte de cacao. Expérience souhaitée. Logement possible sur place.",
     },
     {
       id: 102,
-      title: "Technicien agricole pour plantation d'ananas",
-      location: "Bonoua, Côte d'Ivoire",
+      title: "Technicien agricole pour plantation de bananes",
+      location: "Bafoussam, Ouest",
       type: "Temps plein",
       date: "Hier",
-      employer: "Ananas Export SA",
+      employer: "Bananes Cameroun SARL",
       description:
         "Suivi des cultures, gestion des traitements et supervision des ouvriers. Formation en agronomie requise.",
     },
     {
       id: 103,
       title: "Aide pour élevage de poulets",
-      location: "Bingerville, Côte d'Ivoire",
+      location: "Etoudi, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 3 jours",
-      employer: "Ferme Avicole Moderne",
+      employer: "Ferme Avicole du Centre",
       description: "Alimentation des volailles, nettoyage des poulaillers et collecte des œufs. 3 jours par semaine.",
     },
     {
       id: 104,
       title: "Agronome - Responsable de production",
-      location: "Yamoussoukro, Côte d'Ivoire",
+      location: "Ngaoundéré, Adamaoua",
       type: "Temps plein",
       date: "Il y a 4 jours",
       employer: "Coopérative Agricole",
@@ -49,16 +49,16 @@ export default function AgriculturePage() {
     {
       id: 105,
       title: "Gardien de plantation",
-      location: "Aboisso, Côte d'Ivoire",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 5 jours",
-      employer: "Plantation d'hévéa",
-      description: "Surveillance de plantation d'hévéa. Logement sur place fourni. Expérience en sécurité appréciée.",
+      employer: "Plantation de palmiers à huile",
+      description: "Surveillance de plantation de palmiers à huile. Logement sur place fourni. Expérience en sécurité appréciée.",
     },
     {
       id: 106,
       title: "Conducteur de tracteur",
-      location: "San Pedro, Côte d'Ivoire",
+      location: "Nanga Eboko, Centre",
       type: "Mission",
       date: "Il y a 6 jours",
       employer: "Grand Domaine Agricole",
@@ -67,21 +67,21 @@ export default function AgriculturePage() {
     {
       id: 107,
       title: "Chef d'équipe pour plantation de palmiers",
-      location: "Sassandra, Côte d'Ivoire",
+      location: "Ebolowa, Sud",
       type: "Temps plein",
       date: "Il y a 1 semaine",
-      employer: "Huile Palmier SA",
+      employer: "Huile Palmier Cameroun SA",
       description:
         "Supervision d'une équipe de 15 ouvriers pour l'entretien et la récolte. Expérience requise. Logement fourni.",
     },
     {
       id: 108,
       title: "Ouvrier pour transformation de manioc",
-      location: "Bouaké, Côte d'Ivoire",
+      location: "Bertoua, Est",
       type: "Temps plein",
       date: "Il y a 1 semaine",
       employer: "Coopérative des Femmes",
-      description: "Travail sur chaîne de transformation du manioc en attiéké. Formation assurée.",
+      description: "Travail sur chaîne de transformation du manioc en bâtons de manioc et farine. Formation assurée.",
     },
   ]
 
@@ -122,10 +122,10 @@ export default function AgriculturePage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="daloa">Daloa</SelectItem>
-                  <SelectItem value="bonoua">Bonoua</SelectItem>
-                  <SelectItem value="yamoussoukro">Yamoussoukro</SelectItem>
-                  <SelectItem value="sanpedro">San Pedro</SelectItem>
+                  <SelectItem value="nkongsamba">Nkongsamba</SelectItem>
+                  <SelectItem value="bafoussam">Bafoussam</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">
@@ -144,32 +144,6 @@ export default function AgriculturePage() {
                 <Filter className="h-4 w-4" />
               </Button>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Métiers populaires dans l'agriculture</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link href="/jobs/category/agriculteur">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Agriculteur
-              </Badge>
-            </Link>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Éleveur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Technicien agricole
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Conducteur de machines agricoles
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Ouvrier agricole
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Ingénieur agronome
-            </Badge>
           </div>
         </div>
 

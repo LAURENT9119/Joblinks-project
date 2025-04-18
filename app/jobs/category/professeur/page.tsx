@@ -7,21 +7,21 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function ProfesseurPage() {
-  // Données simulées pour les offres d'emploi de professeur
+  // Données simulées pour les offres d'emploi de professeur au Cameroun
   const jobs = [
     {
       id: 401,
       title: "Professeur de mathématiques",
-      location: "Cocody, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Lycée Excellence",
+      employer: "Lycée Excellence Cameroun",
       description: "Enseignement des mathématiques pour les classes de seconde, première et terminale. Diplôme requis.",
     },
     {
       id: 402,
       title: "Professeur d'anglais",
-      location: "Plateau, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps partiel",
       date: "Hier",
       employer: "Centre linguistique",
@@ -30,17 +30,17 @@ export default function ProfesseurPage() {
     {
       id: 403,
       title: "Professeur particulier",
-      location: "Marcory, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps partiel",
       date: "Il y a 2 jours",
-      employer: "Famille Koné",
+      employer: "Famille Nkomo",
       description:
         "Soutien scolaire pour un élève de CM2, en français et mathématiques. 3 fois par semaine, après l'école.",
     },
     {
       id: 404,
       title: "Professeur d'informatique",
-      location: "Yopougon, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "École de formation professionnelle",
@@ -49,7 +49,7 @@ export default function ProfesseurPage() {
     {
       id: 405,
       title: "Professeur de sciences",
-      location: "Bouaké, Côte d'Ivoire",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 5 jours",
       employer: "Collège Saint-Michel",
@@ -94,10 +94,10 @@ export default function ProfesseurPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
-                  <SelectItem value="bouake">Bouaké</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

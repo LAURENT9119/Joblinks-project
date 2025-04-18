@@ -18,7 +18,7 @@ export default function DashboardPage() {
     {
       id: 1,
       title: "Maçon pour construction maison",
-      location: "Yopougon, Abidjan",
+      location: "Logpom, Douala",
       type: "Mission",
       date: "Aujourd'hui",
       employer: "Jean Kouassi",
@@ -27,7 +27,7 @@ export default function DashboardPage() {
     {
       id: 2,
       title: "Professeur de mathématiques",
-      location: "Cocody, Abidjan",
+      location: "Dakar, Douala",
       type: "Temps partiel",
       date: "Hier",
       employer: "École Excellence",
@@ -36,7 +36,7 @@ export default function DashboardPage() {
     {
       id: 3,
       title: "Chauffeur personnel",
-      location: "Plateau, Abidjan",
+      location: "Plateau, Yaounde",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "Mme Diallo",
@@ -78,9 +78,9 @@ export default function DashboardPage() {
                   <Avatar className="h-20 w-20 mb-2">
                     <AvatarFallback className="text-lg">KT</AvatarFallback>
                   </Avatar>
-                  <h3 className="font-medium text-lg">Konan Traoré</h3>
+                  <h3 className="font-medium text-lg">laurent ML</h3>
                   <p className="text-gray-500 text-sm flex items-center gap-1">
-                    <MapPin className="h-3 w-3" /> Abidjan, Côte d'Ivoire
+                    <MapPin className="h-3 w-3" /> Yassa, Douala
                   </p>
                 </div>
 

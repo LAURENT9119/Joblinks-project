@@ -7,31 +7,31 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function DjPage() {
-  // Données simulées pour les offres d'emploi de DJ
+  // Données simulées pour les offres d'emploi de DJ au Cameroun
   const jobs = [
     {
       id: 601,
       title: "DJ pour club",
-      location: "Zone 4, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps partiel",
       date: "Aujourd'hui",
-      employer: "Club Le VIP",
+      employer: "Club Le Prestige",
       description:
         "Animation musicale les vendredis et samedis soirs, de 22h à 4h. Expérience en musique afro et électro souhaitée.",
     },
     {
       id: 602,
       title: "DJ pour mariage",
-      location: "Cocody, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Mission",
       date: "Hier",
-      employer: "Agence d'événementiel",
+      employer: "Agence Événementielle Cameroun",
       description: "Animation d'un mariage le 15 juin. Répertoire varié demandé, matériel fourni.",
     },
     {
       id: 603,
       title: "DJ résident pour restaurant",
-      location: "Marcory, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps partiel",
       date: "Il y a 2 jours",
       employer: "Restaurant La Terrasse",
@@ -40,16 +40,16 @@ export default function DjPage() {
     {
       id: 604,
       title: "DJ pour radio",
-      location: "Plateau, Abidjan",
+      location: "Mvan, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
-      employer: "Radio Jeunesse",
+      employer: "Radio Jeunesse Cameroun",
       description: "Animation d'émissions musicales quotidiennes. Connaissance de la scène musicale locale exigée.",
     },
     {
       id: 605,
       title: "DJ pour événements d'entreprise",
-      location: "Abidjan et environs",
+      location: "Douala et environs",
       type: "Mission",
       date: "Il y a 5 jours",
       employer: "Agence Corporate Events",
@@ -94,10 +94,11 @@ export default function DjPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="zone4">Zone 4</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="bonapriso">Bonapriso</SelectItem>
+                  <SelectItem value="bonamoussadi">Bonamoussadi</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

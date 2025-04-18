@@ -1,10 +1,16 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { AuthProvider } from "@/lib/auth"
+import { Toaster } from "@/components/ui/toaster"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'JobLink',
-  description: 'Created with MLMF',
-  generator: 'Depaye92',
+  title: "JobLink Cameroun",
+  description: "Plateforme de mise en relation pour l'emploi au Cameroun",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -13,8 +19,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="fr">
+      <body className={inter.className}>
+        <AuthProvider>
+          {children}
+          <Toaster />
+        </AuthProvider>
+      </body>
     </html>
   )
 }

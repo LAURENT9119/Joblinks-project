@@ -7,21 +7,21 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function FemmeDeMenagePage() {
-  // Données simulées pour les offres d'emploi de femme de ménage
+  // Données simulées pour les offres d'emploi de femme de ménage au Cameroun
   const jobs = [
     {
       id: 301,
       title: "Femme de ménage pour villa",
-      location: "Riviera, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Famille Diallo",
+      employer: "Famille Nkomo",
       description: "Ménage quotidien, lessive et repassage pour une famille de 4 personnes. Logée ou non.",
     },
     {
       id: 302,
       title: "Femme de ménage pour bureau",
-      location: "Plateau, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps partiel",
       date: "Hier",
       employer: "Cabinet d'avocats",
@@ -30,7 +30,7 @@ export default function FemmeDeMenagePage() {
     {
       id: 303,
       title: "Femme de ménage pour hôtel",
-      location: "Marcory, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "Hôtel Prestige",
@@ -39,7 +39,7 @@ export default function FemmeDeMenagePage() {
     {
       id: 304,
       title: "Femme de ménage pour résidence",
-      location: "Cocody, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 3 jours",
       employer: "Résidence Les Palmiers",
@@ -48,7 +48,7 @@ export default function FemmeDeMenagePage() {
     {
       id: 305,
       title: "Femme de ménage pour restaurant",
-      location: "Zone 4, Abidjan",
+      location: "Mvan, Yaoundé",
       type: "Temps plein",
       date: "Il y a 4 jours",
       employer: "Restaurant Le Gourmet",
@@ -93,10 +93,11 @@ export default function FemmeDeMenagePage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
-                  <SelectItem value="marcory">Marcory</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="bonapriso">Bonapriso</SelectItem>
+                  <SelectItem value="mvan">Mvan</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

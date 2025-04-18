@@ -12,7 +12,7 @@ export default function BabysitterPage() {
     {
       id: 901,
       title: "Babysitter pour enfant de 2 ans",
-      location: "Cocody, Abidjan",
+      location: "plateau, Yaoundé",
       type: "Temps partiel",
       date: "Aujourd'hui",
       employer: "Famille Koné",
@@ -21,7 +21,7 @@ export default function BabysitterPage() {
     {
       id: 902,
       title: "Nounou à temps plein",
-      location: "Riviera, Abidjan",
+      location: "Madagascar, Yaoundé",
       type: "Temps plein",
       date: "Hier",
       employer: "Famille expatriée",
@@ -30,7 +30,7 @@ export default function BabysitterPage() {
     {
       id: 903,
       title: "Babysitter pour soirées",
-      location: "Plateau, Abidjan",
+      location: "Plateau, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 2 jours",
       employer: "Famille Diallo",
@@ -39,7 +39,7 @@ export default function BabysitterPage() {
     {
       id: 904,
       title: "Nounou pour bébé",
-      location: "Marcory, Abidjan",
+      location: "sous manguie, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Jeune couple",
@@ -49,7 +49,7 @@ export default function BabysitterPage() {
     {
       id: 905,
       title: "Garde d'enfants après l'école",
-      location: "Yopougon, Abidjan",
+      location: "Golf, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 5 jours",
       employer: "Famille Touré",
@@ -95,7 +95,7 @@ export default function BabysitterPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
+                  <SelectItem value="Yaoundé">Yaoundé</SelectItem>
                   <SelectItem value="cocody">Cocody</SelectItem>
                   <SelectItem value="riviera">Riviera</SelectItem>
                   <SelectItem value="plateau">Plateau</SelectItem>

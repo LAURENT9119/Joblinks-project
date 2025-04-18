@@ -192,8 +192,8 @@ export default function HelpPage() {
             <p className="mb-4">Notre équipe de support est disponible pour vous aider. Contactez-nous par :</p>
             <ul className="space-y-2 mb-4">
               <li>Email : support@joblink.com</li>
-              <li>WhatsApp : +225 XX XX XX XX</li>
-              <li>Téléphone : +225 XX XX XX XX (Lun-Ven, 8h-18h)</li>
+              <li>WhatsApp : +237 XX XX XX XX</li>
+              <li>Téléphone : +237 XX XX XX XX (Lun-Ven, 8h-18h)</li>
             </ul>
             <Button className="w-full md:w-auto bg-blue-600 hover:bg-blue-700">Contacter le support</Button>
           </div>

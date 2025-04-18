@@ -7,30 +7,30 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function NumeriquePage() {
-  // Données simulées pour les offres d'emploi dans le secteur numérique
+  // Données simulées pour les offres d'emploi dans le secteur numérique au Cameroun
   const jobs = [
     {
       id: 501,
       title: "Graphiste pour agence de communication",
-      location: "Plateau, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Agence Créative",
+      employer: "Agence Créative Cameroun",
       description: "Création de supports visuels pour clients variés. Maîtrise de la suite Adobe exigée.",
     },
     {
       id: 502,
       title: "Développeur web",
-      location: "Cocody, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps plein",
       date: "Aujourd'hui",
-      employer: "Tech Solutions",
+      employer: "Tech Solutions Cameroun",
       description: "Développement de sites et applications web. Compétences en PHP, JavaScript et frameworks modernes.",
     },
     {
       id: 503,
       title: "Community Manager",
-      location: "Zone 4, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps plein",
       date: "Hier",
       employer: "Agence digitale Connecté",
@@ -39,10 +39,10 @@ export default function NumeriquePage() {
     {
       id: 504,
       title: "Technicien informatique",
-      location: "Marcory, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 2 jours",
-      employer: "IT Support & Services",
+      employer: "IT Support & Services Cameroun",
       description: "Dépannage et maintenance informatique pour entreprises. Permis B et véhicule souhaités.",
     },
     {
@@ -51,34 +51,34 @@ export default function NumeriquePage() {
       location: "Travail à distance",
       type: "Freelance",
       date: "Il y a 2 jours",
-      employer: "Agence Web Premium",
+      employer: "Agence Web Premium Cameroun",
       description: "Optimisation de sites web pour les moteurs de recherche. Facturation à la mission ou au forfait.",
     },
     {
       id: 506,
       title: "Data Analyst",
-      location: "Plateau, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps plein",
       date: "Il y a 3 jours",
-      employer: "Banque Atlantique",
+      employer: "Banque Atlantique Cameroun",
       description: "Analyse de données clients et reporting. Compétences en Excel, SQL et outils de visualisation.",
     },
     {
       id: 507,
       title: "Gestionnaire e-commerce",
-      location: "Deux Plateaux, Abidjan",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 4 jours",
-      employer: "Marketplace Africa",
+      employer: "Marketplace Africa Cameroun",
       description: "Gestion d'une boutique en ligne. Mise en ligne des produits, suivi des commandes et SAV.",
     },
     {
       id: 508,
       title: "DJ animateur pour radio en ligne",
-      location: "Yopougon, Abidjan",
+      location: "Mvan, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 5 jours",
-      employer: "Radio Urban Beat",
+      employer: "Radio Urban Beat Cameroun",
       description: "Animation d'émissions musicales sur radio web. Connaissance de la scène musicale locale exigée.",
     },
   ]
@@ -120,9 +120,9 @@ export default function NumeriquePage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
                   <SelectItem value="remote">Travail à distance</SelectItem>
                 </SelectContent>
               </Select>
@@ -141,34 +141,6 @@ export default function NumeriquePage() {
                 <Filter className="h-4 w-4" />
               </Button>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Métiers populaires dans le numérique</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link href="/jobs/category/graphiste">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Graphiste
-              </Badge>
-            </Link>
-            <Link href="/jobs/category/dj">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                DJ
-              </Badge>
-            </Link>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Développeur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Community Manager
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Technicien informatique
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Data Analyst
-            </Badge>
           </div>
         </div>
 

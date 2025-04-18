@@ -7,12 +7,12 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function PlombierPage() {
-  // Données simulées pour les offres d'emploi de plombier
+  // Données simulées pour les offres d'emploi de plombier au Cameroun
   const jobs = [
     {
       id: 701,
       title: "Plombier pour chantier résidentiel",
-      location: "Cocody, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Mission",
       date: "Aujourd'hui",
       employer: "Entreprise de construction",
@@ -21,7 +21,7 @@ export default function PlombierPage() {
     {
       id: 702,
       title: "Plombier dépanneur",
-      location: "Abidjan et environs",
+      location: "Douala et environs",
       type: "Temps plein",
       date: "Hier",
       employer: "SOS Plomberie",
@@ -30,7 +30,7 @@ export default function PlombierPage() {
     {
       id: 703,
       title: "Plombier pour hôtel",
-      location: "Assinie, Côte d'Ivoire",
+      location: "Kribi, Sud",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "Complexe hôtelier",
@@ -39,7 +39,7 @@ export default function PlombierPage() {
     {
       id: 704,
       title: "Apprenti plombier",
-      location: "Yopougon, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Entreprise Tuyauterie Pro",
@@ -48,7 +48,7 @@ export default function PlombierPage() {
     {
       id: 705,
       title: "Plombier industriel",
-      location: "Zone industrielle, Abidjan",
+      location: "Zone industrielle, Douala",
       type: "Temps plein",
       date: "Il y a 5 jours",
       employer: "Usine de transformation",
@@ -93,10 +93,10 @@ export default function PlombierPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="yopougon">Yopougon</SelectItem>
-                  <SelectItem value="assinie">Assinie</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
+                  <SelectItem value="zone-industrielle">Zone industrielle</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

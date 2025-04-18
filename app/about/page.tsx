@@ -97,9 +97,9 @@ export default function AboutPage() {
             </p>
             <ul className="space-y-2">
               <li>Email : contact@joblink.com</li>
-              <li>Téléphone : +225 XX XX XX XX</li>
-              <li>WhatsApp : +225 XX XX XX XX</li>
-              <li>Adresse : Abidjan, Côte d'Ivoire</li>
+              <li>Téléphone : +237 XX XX XX XX</li>
+              <li>WhatsApp : +237 XX XX XX XX</li>
+              <li>Adresse : Douala , Cameroun</li>
             </ul>
           </div>
         </div>

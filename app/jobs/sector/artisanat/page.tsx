@@ -7,12 +7,12 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function ArtisanatPage() {
-  // Données simulées pour les offres d'emploi dans le secteur de l'artisanat
+  // Données simulées pour les offres d'emploi dans le secteur de l'artisanat au Cameroun
   const jobs = [
     {
       id: 201,
       title: "Maçon pour construction villa",
-      location: "Cocody, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Mission",
       date: "Aujourd'hui",
       employer: "Cabinet d'architecture Moderne",
@@ -21,7 +21,7 @@ export default function ArtisanatPage() {
     {
       id: 202,
       title: "Menuisier ébéniste",
-      location: "Adjamé, Abidjan",
+      location: "Bonamoussadi, Douala",
       type: "Temps plein",
       date: "Hier",
       employer: "Atelier Bois Précieux",
@@ -30,7 +30,7 @@ export default function ArtisanatPage() {
     {
       id: 203,
       title: "Plombier pour rénovation immeuble",
-      location: "Plateau, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Mission",
       date: "Il y a 2 jours",
       employer: "Entreprise de rénovation",
@@ -39,7 +39,7 @@ export default function ArtisanatPage() {
     {
       id: 204,
       title: "Tailleur / Couturier",
-      location: "Treichville, Abidjan",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Atelier Élégance",
@@ -48,16 +48,16 @@ export default function ArtisanatPage() {
     {
       id: 205,
       title: "Électricien",
-      location: "Yopougon, Abidjan",
+      location: "Mvan, Yaoundé",
       type: "Temps plein",
       date: "Il y a 4 jours",
-      employer: "Électricité Générale SA",
+      employer: "Électricité Générale Cameroun",
       description: "Installation et dépannage électrique pour particuliers et professionnels. Permis B nécessaire.",
     },
     {
       id: 206,
       title: "Carreleur",
-      location: "Marcory, Abidjan",
+      location: "Kribi, Sud",
       type: "Mission",
       date: "Il y a 5 jours",
       employer: "Entreprise de BTP",
@@ -66,7 +66,7 @@ export default function ArtisanatPage() {
     {
       id: 207,
       title: "Forgeron d'art",
-      location: "Bingerville, Côte d'Ivoire",
+      location: "Nkongsamba, Littoral",
       type: "Temps plein",
       date: "Il y a 6 jours",
       employer: "Atelier Métal & Design",
@@ -75,7 +75,7 @@ export default function ArtisanatPage() {
     {
       id: 208,
       title: "Peintre en bâtiment",
-      location: "Riviera, Abidjan",
+      location: "Bafoussam, Ouest",
       type: "Temps partiel",
       date: "Il y a 1 semaine",
       employer: "Déco-Peinture",
@@ -120,10 +120,10 @@ export default function ArtisanatPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="yopougon">Yopougon</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="kribi">Kribi</SelectItem>
+                  <SelectItem value="bafoussam">Bafoussam</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">
@@ -141,37 +141,6 @@ export default function ArtisanatPage() {
                 <Filter className="h-4 w-4" />
               </Button>
             </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Métiers populaires dans l'artisanat</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link href="/jobs/category/macon">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Maçon
-              </Badge>
-            </Link>
-            <Link href="/jobs/category/plombier">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                Plombier
-              </Badge>
-            </Link>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Menuisier
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Électricien
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Carreleur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Tailleur
-            </Badge>
-            <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-              Peintre
-            </Badge>
           </div>
         </div>
 

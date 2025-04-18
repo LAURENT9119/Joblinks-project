@@ -12,16 +12,16 @@ export default function BabysitterPage() {
     {
       id: 901,
       title: "Babysitter pour enfant de 2 ans",
-      location: "plateau, Yaoundé",
+      location: "Bastos, Yaoundé",
       type: "Temps partiel",
       date: "Aujourd'hui",
-      employer: "Famille Koné",
+      employer: "Famille Nkomo",
       description: "Garde d'un enfant de 2 ans, 3 après-midis par semaine (lundi, mercredi, vendredi) de 14h à 18h.",
     },
     {
       id: 902,
       title: "Nounou à temps plein",
-      location: "Madagascar, Yaoundé",
+      location: "Essos, Yaoundé",
       type: "Temps plein",
       date: "Hier",
       employer: "Famille expatriée",
@@ -30,16 +30,16 @@ export default function BabysitterPage() {
     {
       id: 903,
       title: "Babysitter pour soirées",
-      location: "Plateau, Yaoundé",
+      location: "Ngousso, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 2 jours",
-      employer: "Famille Diallo",
+      employer: "Famille Tchatchouang",
       description: "Garde d'enfants (7 et 9 ans) occasionnellement en soirée, principalement les weekends.",
     },
     {
       id: 904,
       title: "Nounou pour bébé",
-      location: "sous manguie, Yaoundé",
+      location: "Obili, Yaoundé",
       type: "Temps plein",
       date: "Il y a 3 jours",
       employer: "Jeune couple",
@@ -49,10 +49,10 @@ export default function BabysitterPage() {
     {
       id: 905,
       title: "Garde d'enfants après l'école",
-      location: "Golf, Yaoundé",
+      location: "Mvan, Yaoundé",
       type: "Temps partiel",
       date: "Il y a 5 jours",
-      employer: "Famille Touré",
+      employer: "Famille Ndongo",
       description:
         "Récupérer 3 enfants à l'école et les garder jusqu'au retour des parents, du lundi au vendredi de 16h à 19h.",
     },
@@ -95,10 +95,11 @@ export default function BabysitterPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="Yaoundé">Yaoundé</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="riviera">Riviera</SelectItem>
-                  <SelectItem value="plateau">Plateau</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="essos">Essos</SelectItem>
+                  <SelectItem value="ngousso">Ngousso</SelectItem>
+                  <SelectItem value="obili">Obili</SelectItem>
+                  <SelectItem value="mvan">Mvan</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

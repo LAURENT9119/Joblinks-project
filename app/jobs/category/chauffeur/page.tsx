@@ -7,21 +7,21 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export default function ChauffeurPage() {
-  // Données simulées pour les offres d'emploi de chauffeur
+  // Données simulées pour les offres d'emploi de chauffeur au Cameroun
   const jobs = [
     {
       id: 801,
       title: "Chauffeur personnel",
-      location: "Cocody, Abidjan",
+      location: "Bastos, Yaoundé",
       type: "Temps plein",
       date: "Aujourd'hui",
       employer: "Famille expatriée",
-      description: "Transport quotidien pour une famille. Horaires: 7h-19h, du lundi au samedi. Permis B exigé.",
+      description: "Transport quotidien pour une famille. Horaires : 7h-19h, du lundi au samedi. Permis B exigé.",
     },
     {
       id: 802,
       title: "Chauffeur de taxi",
-      location: "Abidjan",
+      location: "Douala",
       type: "Temps plein",
       date: "Hier",
       employer: "Compagnie de taxi",
@@ -30,17 +30,17 @@ export default function ChauffeurPage() {
     {
       id: 803,
       title: "Chauffeur-livreur",
-      location: "Marcory, Abidjan",
+      location: "Bonapriso, Douala",
       type: "Temps plein",
       date: "Il y a 2 jours",
       employer: "Entreprise de livraison",
       description:
-        "Livraison de colis dans Abidjan et environs. Permis B et moto fournie. Bonne connaissance de la ville.",
+        "Livraison de colis dans Douala et environs. Permis B et moto fournie. Bonne connaissance de la ville.",
     },
     {
       id: 804,
       title: "Chauffeur pour VTC",
-      location: "Abidjan",
+      location: "Yaoundé",
       type: "Temps partiel",
       date: "Il y a 3 jours",
       employer: "Plateforme VTC",
@@ -49,11 +49,11 @@ export default function ChauffeurPage() {
     {
       id: 805,
       title: "Chauffeur poids lourd",
-      location: "Abidjan - San Pedro",
+      location: "Douala - Bafoussam",
       type: "Temps plein",
       date: "Il y a 5 jours",
       employer: "Société de transport",
-      description: "Transport de marchandises entre Abidjan et San Pedro. Permis C exigé. Expérience minimum 3 ans.",
+      description: "Transport de marchandises entre Douala et Bafoussam. Permis C exigé. Expérience minimum 3 ans.",
     },
   ]
 
@@ -92,10 +92,10 @@ export default function ChauffeurPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Tous les lieux</SelectItem>
-                  <SelectItem value="abidjan">Abidjan</SelectItem>
-                  <SelectItem value="cocody">Cocody</SelectItem>
-                  <SelectItem value="marcory">Marcory</SelectItem>
-                  <SelectItem value="sanpedro">San Pedro</SelectItem>
+                  <SelectItem value="yaounde">Yaoundé</SelectItem>
+                  <SelectItem value="douala">Douala</SelectItem>
+                  <SelectItem value="bastos">Bastos</SelectItem>
+                  <SelectItem value="bafoussam">Bafoussam</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="type">

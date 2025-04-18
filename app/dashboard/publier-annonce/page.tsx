@@ -150,7 +150,7 @@ export default function PublierAnnoncePage() {
                         id="location"
                         name="location"
                         className="pl-10"
-                        placeholder="Ex: Cocody, Abidjan"
+                        placeholder="Ex: Douala, Kribi"
                         value={formData.location}
                         onChange={handleChange}
                         required
